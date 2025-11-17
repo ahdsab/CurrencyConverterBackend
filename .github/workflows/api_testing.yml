@@ -5,6 +5,15 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+        run_all:
+          description: "Run all jobs?"
+          required: true
+          default: "yes"
+          type: choice
+          options:
+            - "yes"
+            - "no"
 
 jobs:
   api-tests:
