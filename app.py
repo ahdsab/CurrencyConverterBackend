@@ -10,7 +10,7 @@ def health():
 
 def convert_currency(amount, src_currency, dist_currency):
     return (amount / rates[src_currency]) * rates[dist_currency]
-# test
+
 @app.route('/convert', methods=["POST"])
 def convert():
     data = request.get_json()
